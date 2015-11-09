@@ -16,9 +16,15 @@
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @vehicle.category_id %>
+  <strong>Make:</strong>
+  <%= @vehicle.category.make.name %>
 </p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @vehicle.category.name %>
+</p>
+
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>
