@@ -16,14 +16,20 @@
 </p>
 
 <p>
-  <strong>Make:</strong>
-  <%= @vehicle.category.make.name %>
+  <strong>Features:</strong>
+  <ul>
+  <%- @vehicle.features.each do |feature| %>
+    <li><%= feature.name %></li>
+  <% end %>
+  </ul>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @vehicle.category.name %>
+  <strong>Make/Category:</strong>
+  <%= @vehicle.category.make.name %> <%= @vehicle.category.name %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
